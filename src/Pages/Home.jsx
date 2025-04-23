@@ -6,36 +6,128 @@ import Badge from "../Components/Badge";
 import CardProject from "../Components/CardProject";
 
 function Home() {
+  const experiences = [
+    {
+      title: "Junior Web Developer",
+      provider: "DigiUp x Telkom Indonesia",
+      date: "November 2022",
+      description:
+        "Mempelajari pengembangan web menggunakan CodeIgniter 4 dan Bootstrap 5 dengan pendekatan MVC dan penerapan fitur CRUD.",
+    },
+    {
+      title: "Sertifikasi Jaringan Komputer",
+      provider: "Axioo Class Program",
+      date: "Maret 2023",
+      description:
+        "Menguasai instalasi perangkat jaringan, konfigurasi IP dan routing, serta pemasangan jaringan nirkabel yang aman.",
+    },
+    {
+      title: "Junior Desain Grafis",
+      provider: "Digitalent x Kominfo",
+      date: "Juli 2024",
+      description:
+        "Mendalami prinsip dasar desain visual, warna, dan tipografi serta mengaplikasikannya menggunakan software desain grafis.",
+    },
+    {
+      title: "Machine Learning Engineer",
+      provider: "Coding Camp powered by DBS Foundation",
+      date: "Februari 2024 - Sekarang",
+      description:
+        "Mempelajari dasar-dasar visualisasi data, machine learning, deep learning, dan klasifikasi gambar serta mengerjakan submission yang diberikan.",
+    },
+  ];
+
+  const certifications = [
+    {
+      title: "Belajar Machine Learning untuk Pemula",
+      issued: "April 2025",
+      expired: "April 2028",
+      id: "0LZ0RE600P65",
+    },
+    {
+      title: "Belajar Analisis Data dengan Python",
+      issued: "Maret 2025",
+      expired: "Maret 2028",
+      id: "MEPJQML16X3V",
+    },
+    {
+      title: "Belajar Dasar Visualisasi Data",
+      issued: "Februari 2025",
+      expired: "Februari 2028",
+      id: "L4PQE1K42PO1",
+    },
+    {
+      title: "Belajar Dasar AI",
+      issued: "Februari 2025",
+      expired: "Februari 2028",
+      id: "1OP82NKY2PQK",
+    },
+    {
+      title: "Belajar Dasar Git dengan GitHub",
+      issued: "Februari 2025",
+      expired: "Februari 2028",
+      id: "N9ZO9O5VYXG5",
+    },
+    {
+      title: "Belajar Dasar Structured Query Language (SQL)",
+      issued: "Februari 2025",
+      expired: "Februari 2028",
+      id: "0LZ0RRL7KP65",
+    },
+
+    // {
+    //   title:
+    //     "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+    //   issued: "Februari 2025",
+    //   expired: "Februari 2028",
+    //   id: "2VX3K6RDQXYQ",
+    // },
+    // {
+    //   title: "Memulai Pemrograman dengan Python",
+    //   issued: "Februari 2025",
+    //   expired: "Februari 2028",
+    //   id: "MEPJQ283WX3V",
+    // },
+    // {
+    //   title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+    //   issued: "Februari 2025",
+    //   expired: "Februari 2028",
+    //   id: "JLX19WEMJP72",
+    // },
+  ];
+
   return (
     <MainLayouts>
       <header
         id="home"
-        className="min-h-screen flex flex-col justify-center items-center gap-8 text-center bg-gray-950 text-gray-50">
+        className="min-h-dvh md:min-h-screen flex flex-col justify-center items-center gap-8 text-center bg-gray-950 text-gray-50">
         <div className="flex flex-col justify-center items-center gap-3.5">
-          <h1 className="font-bold text-4xl">Hai, Saya Ahmad Hamdani.</h1>
-          <h2 className="font-medium text-lg text-gray-400 max-w-[720px]">
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">
+            Hai, Saya Ahmad Hamdani.
+          </h1>
+          <h2 className="font-medium text-sm md:text-base lg:text-lg text-gray-400 max-w-[720px]">
             Saat ini saya sedang belajar dan sangat antusias dalam mengembangkan
             Website, Aplikasi, Data Science, dan Machine Learning.
           </h2>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-2 md:gap-6">
           <a
             href="https://wa.me/6285607599369"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-gray-50 hover:bg-gray-900 rounded-lg text-lg font-semibold inline-block">
+            className="px-4 py-2 border border-gray-50 hover:bg-gray-900 rounded-lg text-base md:text-lg font-semibold inline-block">
             Hire Me
           </a>
 
           <a
             href="/assets/cv-ahmad.pdf"
             download="CV_AHMAD HAMDANI.pdf"
-            className="px-4 py-2 bg-gray-50 text-gray-950 hover:bg-gray-200 rounded-lg text-lg font-semibold inline-block ml-2">
+            className="px-4 py-2 bg-gray-50 text-gray-950 hover:bg-gray-200 rounded-lg text-base md:text-lg font-semibold inline-block ml-2">
             Download CV
           </a>
         </div>
         <div className="flex flex-col justify-center items-center gap-3.5">
-          <h2 className="font-medium text-base">Hubungi Saya</h2>
+          <h2 className="font-medium text-sm md:text-base">Hubungi Saya</h2>
           <div className="flex gap-4">
             {/* WhatsApp */}
             <a
@@ -44,7 +136,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer">
               <svg
-                className="text-gray-00 w-10 h-10 hover:text-gray-50 transition-colors"
+                className="text-gray-00 w-8 md:w-10 hover:text-gray-50 transition-colors"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor">
@@ -58,7 +150,7 @@ function Home() {
             {/* Facebook */}
             <a
               href="https://www.facebook.com/profile.php?id=100049775690863&mibextid=ZbWKwL"
-              className="text-gray-00 hover:text-gray-50 w-10 h-10 transition-colors"
+              className="text-gray-00 hover:text-gray-50 w-8 md:w-10 transition-colors"
               target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -73,7 +165,7 @@ function Home() {
             {/* Instagram */}
             <a
               href="https://www.instagram.com/hamdani_qhmqd/"
-              className="text-gray-00 hover:text-gray-50 w-10 h-10 transition-colors"
+              className="text-gray-00 hover:text-gray-50 w-8 md:w-10 transition-colors"
               target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -90,7 +182,7 @@ function Home() {
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/ahmad-hamdani-769b45280/"
-              className="text-gray-00 hover:text-gray-50 w-10 h-10 transition-colors"
+              className="text-gray-00 hover:text-gray-50 w-8 md:w-10 transition-colors"
               target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -105,7 +197,7 @@ function Home() {
             {/* GitHub */}
             <a
               href="https://github.com/hamdaniqhmqd"
-              className="text-gray-00 hover:text-gray-50 w-10 h-10 transition-colors"
+              className="text-gray-00 hover:text-gray-50 w-8 md:w-10 transition-colors"
               target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -123,7 +215,7 @@ function Home() {
             {/* Telegram */}
             <a
               href="https://t.me/hamdaniqhmqd"
-              className="text-gray-00 hover:text-gray-50 w-10 h-10 transition-colors"
+              className="text-gray-00 hover:text-gray-50 w-8 md:w-10 transition-colors"
               target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -138,9 +230,13 @@ function Home() {
         </div>
       </header>
 
-      <section id="tentang_saya" className="min-h-screen w-full py-16">
-        <h1 className="font-bold text-4xl text-center mb-12">Tentang Saya</h1>
-        <div className="flex gap-6 w-full justify-center items-center">
+      <section
+        id="tentang_saya"
+        className="min-h-dvh md:min-h-screen w-full py-12 md:py-14 lg:py-16">
+        <h1 className="font-bold text-3xl md:text-4xl text-center mb-12">
+          Tentang Saya
+        </h1>
+        <div className="flex flex-col lg:flex-row gap-6 w-full justify-center items-center">
           <figure className="flex-1 flex justify-center">
             <img
               src="imgs/is_me.jpg"
@@ -148,14 +244,14 @@ function Home() {
               className="aspect-3/4 object-cover w-[280px] rounded-lg"
             />
           </figure>
-          <div className="flex-1 flex flex-col gap-2">
-            <p className="font-medium text-lg text-gray-400">
+          <div className="flex-1 flex flex-col gap-2 font-medium text-base md:text-lg text-gray-400">
+            <p className="">
               Nama saya Ahmad Hamdani. Saat ini, saya tengah menjalani program
               studi D3 Teknologi Informasi di Politeknik Negeri Madiun, yang
               memberi saya dasar yang kuat dalam pengembangan dan pemrograman di
               berbagai platform teknologi.
             </p>
-            <p className="font-medium text-lg text-gray-400">
+            <p className="">
               Ketertarikan utama saya ada pada pengembangan website, aplikasi
               mobile, machine learning dan data science. Saya sangat antusias
               dalam menggali lebih dalam berbagai teknologi web dan aplikasi,
@@ -166,7 +262,7 @@ function Home() {
               Matplotlib dan Seaborn untuk visualisasi data, serta scikit-learn
               untuk pembuatan model machine learning.
             </p>
-            <p className="font-medium text-lg text-gray-400">
+            <p className="">
               Selain itu, saya juga aktif mengembangkan proyek-proyek berbasis
               data dan solusi digital yang fokus pada analisis dan pengelolaan
               data.
@@ -175,14 +271,18 @@ function Home() {
         </div>
       </section>
 
-      <section id="proyek" className="min-h-screen w-full py-16">
-        <h1 className="font-bold text-4xl text-center mb-12">Proyek</h1>
+      <section
+        id="proyek"
+        className="min-h-dvh md:min-h-screen w-full py-12 md:py-14 lg:py-16">
+        <h1 className="font-bold text-3xl md:text-4xl text-center mb-12">
+          Proyek
+        </h1>
         <div className="w-full flex flex-wrap justify-center gap-6 mb-12">
           <CardProject
             title={"Agropupuk"}
             description="Website informasi pupuk yang dikembangkan menggunakan Laravel 11 dengan fitur CRUD, pengelolaan konten dinamis seperti berita, artikel, dan katalog produk yang saling berelasi, serta sistem autentikasi berbasis session."
             img="imgs/agropupuk1.png"
-            className="flex-1 flex flex-col gap-3.5">
+            className="w-full lg:flex-1 flex flex-col gap-3.5">
             <Badge img={"icons/Laravel.svg"}>Laravel 11</Badge>
             <Badge img={"icons/MySQL.svg"}>MySQL</Badge>
             <Badge img={"icons/XAMPP.svg"}>XAMPP</Badge>
@@ -195,7 +295,7 @@ function Home() {
             title={"Aplikasi Monitoring Gudang"}
             description="Aplikasi Android berbasis Kotlin dan XML dengan arsitektur MVVM, menyediakan fitur CRUD untuk data Supplier, Barang, dan Transaksi yang saling berelasi, serta integrasi database offline (Room) dan online melalui REST API Laravel 11."
             img="imgs/apk_monitoring_gudang2.png"
-            className="flex-1 flex flex-col gap-3.5">
+            className="w-full lg:flex-1 flex flex-col gap-3.5">
             <Badge img={"icons/kotlin.png"}>Kotlin</Badge>
             <Badge img={"icons/xml.png"}>XML</Badge>
             <Badge img={"icons/sqlite.png"}>SQLite</Badge>
@@ -205,7 +305,7 @@ function Home() {
             title={"Project Predict Saham BBRI"}
             description="Mengembangkan model prediksi harga saham BBRI menggunakan Linear Regression dengan data historis, mengolah data saham dengan Pandas dan membaginya untuk pelatihan model, serta membuat aplikasi Streamlit untuk menampilkan hasil prediksi dan evaluasi model."
             img="imgs/prediksi_saham2.png"
-            className="flex-1 flex flex-col gap-3.5">
+            className="w-full lg:flex-1 flex flex-col gap-3.5">
             <Badge img={"icons/python.png"}>Python</Badge>
             <Badge img={"icons/pandas.png"}>Pandas</Badge>
             <Badge img={"icons/scikit-learn.png"}>Scikit-Learn</Badge>
@@ -222,124 +322,39 @@ function Home() {
         </div>
       </section>
 
-      <section id="pelatihan" className="min-h-screen w-full py-16">
-        <h1 className="font-bold text-4xl text-center mb-12">Pelatihan</h1>
+      <section
+        id="pelatihan"
+        className="min-h-dvh md:min-h-screen w-full py-12 md:py-14 lg:py-16">
+        <h1 className="font-bold text-3xl md:text-4xl text-center mb-12">
+          Pelatihan
+        </h1>
         <div className="w-full grid items-center justify-center gap-6 max-w-[960px] mx-auto">
-          <div className="grid gap-2">
-            <div className="grid gap-1">
-              <h1 className="font-bold text-2xl">Junior Web Developer</h1>
-              <h3 className="font-semibold text-base text-gray-300">
-                DigiUp x Telkom Indonesia | November 2022
-              </h3>
+          {experiences.map((exp, index) => (
+            <div key={index} className="grid gap-2">
+              <div className="grid gap-1">
+                <h1 className={`font-bold text-xl md:text-2xl `}>
+                  {exp.title}
+                </h1>
+                <h3 className="font-semibold text-base text-gray-300">
+                  {exp.provider} | {exp.date}
+                </h3>
+              </div>
+              <p className="font-normal text-base text-gray-400">
+                {exp.description}
+              </p>
             </div>
-            <p className="font-normal text-base text-gray-400">
-              Mempelajari pengembangan web menggunakan CodeIgniter 4 dan
-              Bootstrap 5 dengan pendekatan MVC dan penerapan fitur CRUD.
-            </p>
-          </div>
-          <div className="grid gap-2">
-            <div className="grid gap-1">
-              <h1 className="font-bold text-2xl">
-                Sertifikasi Jaringan Komputer
-              </h1>
-              <h3 className="font-semibold text-base text-gray-300">
-                Axioo Class Program | Maret 2023
-              </h3>
-            </div>
-            <p className="font-normal text-base text-gray-400">
-              Menguasai instalasi perangkat jaringan, konfigurasi IP dan
-              routing, serta pemasangan jaringan nirkabel yang aman.
-            </p>
-          </div>
-          <div className="grid gap-2">
-            <div className="grid gap-1">
-              <h1 className="font-bold text-2xl">Junior Desain Grafis</h1>
-              <h3 className="font-semibold text-base text-gray-300">
-                Digitalent x Kominfo | Juli 2024
-              </h3>
-            </div>
-            <p className="font-normal text-base text-gray-400">
-              Mendalami prinsip dasar desain visual, warna, dan tipografi serta
-              mengaplikasikannya menggunakan software desain grafis.
-            </p>
-          </div>
-          <div className="grid gap-2">
-            <div className="grid gap-1">
-              <h1 className="font-bold text-2xl">Machine Learning Engineer</h1>
-              <h3 className="font-semibold text-base text-gray-300">
-                Coding Camp powered by DBS Foundation | Februari 2024 - Sekarang
-              </h3>
-            </div>
-            <p className="font-normal text-base text-gray-400">
-              Mempelajari dasar-dasar visualisasi data, machine learning, deep
-              learning, dan klasifikasi gambar serta mengerjakan submission yang
-              diberikan.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
-      <section id="sertifikasi" className="min-h-screen w-full py-16">
-        <h1 className="font-bold text-4xl text-center mb-12">Sertifikasi</h1>
+      <section
+        id="sertifikasi"
+        className="min-h-dvh md:min-h-screen w-full py-12 md:py-14 lg:py-16">
+        <h1 className="font-bold text-3xl md:text-4xl text-center mb-12">
+          Sertifikasi
+        </h1>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-          {[
-            {
-              title: "Belajar Machine Learning untuk Pemula",
-              issued: "April 2025",
-              expired: "April 2028",
-              id: "0LZ0RE600P65",
-            },
-            {
-              title: "Belajar Analisis Data dengan Python",
-              issued: "Maret 2025",
-              expired: "Maret 2028",
-              id: "MEPJQML16X3V",
-            },
-            {
-              title: "Belajar Dasar Visualisasi Data",
-              issued: "Februari 2025",
-              expired: "Februari 2028",
-              id: "L4PQE1K42PO1",
-            },
-            {
-              title: "Belajar Dasar AI",
-              issued: "Februari 2025",
-              expired: "Februari 2028",
-              id: "1OP82NKY2PQK",
-            },
-            {
-              title: "Belajar Dasar Git dengan GitHub",
-              issued: "Februari 2025",
-              expired: "Februari 2028",
-              id: "N9ZO9O5VYXG5",
-            },
-            {
-              title: "Belajar Dasar Structured Query Language (SQL)",
-              issued: "Februari 2025",
-              expired: "Februari 2028",
-              id: "0LZ0RRL7KP65",
-            },
-
-            // {
-            //   title:
-            //     "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-            //   issued: "Februari 2025",
-            //   expired: "Februari 2028",
-            //   id: "2VX3K6RDQXYQ",
-            // },
-            // {
-            //   title: "Memulai Pemrograman dengan Python",
-            //   issued: "Februari 2025",
-            //   expired: "Februari 2028",
-            //   id: "MEPJQ283WX3V",
-            // },
-            // {
-            //   title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
-            //   issued: "Februari 2025",
-            //   expired: "Februari 2028",
-            //   id: "JLX19WEMJP72",
-            // },
-          ].map((item, index) => (
+          {certifications.map((item, index) => (
             <div key={index} className="flex items-center gap-5">
               <img
                 src="icons/sertifikat_dicoding.png"

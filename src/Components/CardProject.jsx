@@ -9,7 +9,7 @@ export default function CardProject({
   children,
 }) {
   return (
-    <div className={"flex-1 flex flex-col gap-3.5 " + className}>
+    <div className={className}>
       <img
         src={img}
         alt={title}
